@@ -21,16 +21,12 @@ parameters:
 
 jobs:
   - deployment: DeployToAKS
-    # pool:
-    #   vmImage: 'ubuntu-latest'
     displayName: "Deploy Resources to AKS"
     environment: ${{parameters.environment}}
     strategy:
       runOnce:
         deploy:
           steps:
-            # - checkout: self
-
             - task: DownloadPipelineArtifact@2
               displayName: 'Download Artifact'
               inputs:
