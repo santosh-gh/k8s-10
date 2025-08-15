@@ -50,13 +50,17 @@ jobs:
                   if [ "${{parameters.serviceName}}" != "config" ]; then
 
                     if [ "${{parameters.serviceName}}" != "rabbitmq" ]; then
-                      echo "Updating image tag in ${{parameters.serviceName}}/base/deployment.yaml"
-                      sed -i "s/tag:.*/tag:  ${{parameters.imageTag}}/" $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/deployment.yaml
+                     
+                      echo "Updating deployment files with image tags..."
+                      sed -i "s|acronlinestoredevuksouth001.azurecr.io/${{parameters.serviceName}}|${{parameters.acrName}}.azurecr.io/${{parameters.serviceName}}:$(imageTag)|g"  $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/deployment.yaml                  
                       cat $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/deployment.yaml
-                    else
-                      echo "Updating image tag in ${{parameters.serviceName}}/base/statefulset.yaml"
-                      sed -i "s/tag:.*/tag:  ${{parameters.imageTag}}/" $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/statefulset.yaml
+                    else                     
+                      
+                      echo "Updating deployment files with image tags..."
+                      sed -i "s|acronlinestoredevuksouth001.azurecr.io/${{parameters.serviceName}}|${{parameters.acrName}}.azurecr.io/${{parameters.serviceName}}:$(imageTag)|g"  $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/statefulset.yaml
                       cat $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/statefulset.yaml
+
+
                     fi
                   else
                     echo "Skipping image tag update for service 'config'"
