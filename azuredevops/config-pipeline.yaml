@@ -6,7 +6,7 @@ pool:
 variables:
   - group: k8s-common  
   - name: serviceName 
-    value: 'rabbitmq'
+    value: 'config'
   - name: artifactName 
     value: 'manifests'
 
