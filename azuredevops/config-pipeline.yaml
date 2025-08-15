@@ -21,7 +21,7 @@ stages:
             displayName: Publish Manifest
             inputs:
               targetPath: "$(Build.SourcesDirectory)/${artifactName}"
-              artifact: ${artifactName}
+              artifact: $(artifactName)
 
   - stage: Dev_Deploy
     displayName: Deploy to AKS Dev
