@@ -35,7 +35,7 @@ jobs:
               displayName: 'Download Artifact'
               inputs:
                 artifact: ${{parameters.artifactName}}
-                path: "$(Pipeline.Workspace)/${parameters.artifactName}"
+                path: "$(Pipeline.Workspace)/${{parameters.artifactName}}"
 
             - task: AzureCLI@2
               inputs:
