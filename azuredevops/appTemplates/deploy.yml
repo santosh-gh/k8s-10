@@ -73,11 +73,11 @@ jobs:
                   az aks get-credentials --name  ${{parameters.aksCluster}} --resource-group ${{parameters.aksResourceGroup}} --overwrite-existing
 
                   if [ "${{parameters.serviceName}}" != "config" ]; then
-                    kubectl kustomize ./${{parameters.artifactName}}/${{parameters.serviceName}}/overlays/${{parameters.environment}} 
-                    kubectl apply -k ./${{parameters.artifactName}}/${{parameters.serviceName}}/overlays/${{parameters.environment}} -n ${{parameters.namespace}}
+                    kubectl kustomize ./$(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/overlays/${{parameters.environment}} 
+                    kubectl apply -k ./$(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/overlays/${{parameters.environment}} -n ${{parameters.namespace}}
                   else
-                    kubectl kustomize ./${{parameters.artifactName}}/${{parameters.serviceName}}/base/
-                    kubectl apply -k ./${{parameters.artifactName}}/${{parameters.serviceName}}/base/ -n ${{parameters.namespace}}
+                    kubectl kustomize ./$(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/
+                    kubectl apply -k ./$(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/ -n ${{parameters.namespace}}
                   fi
 
                  

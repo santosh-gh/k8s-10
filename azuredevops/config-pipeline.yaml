@@ -20,7 +20,7 @@ stages:
           - task: PublishPipelineArtifact@1
             displayName: Publish Manifest
             inputs:
-              targetPath: "$(artifactName)"
+              targetPath: "$(Build.SourcesDirectory)/$(artifactName)"
               artifact: $(artifactName)
 
   - stage: Dev_Deploy
