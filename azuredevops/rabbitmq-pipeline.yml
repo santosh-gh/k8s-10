@@ -13,8 +13,21 @@ variables:
     value: '3.13'
 
 stages:
+  - stage: Publish
+    displayName: Publish Manifest
+    jobs:
+      - job: PublishManifest
+        displayName: Publish Manifest
+        steps:          
+          - task: PublishPipelineArtifact@1
+            displayName: Publish Manifest
+            inputs:
+              targetPath: "$(Build.SourcesDirectory)/${artifactName}"
+              artifact: $(artifactName)
+
   - stage: Dev_Deploy
     displayName: Deploy to AKS Dev
+    dependsOn: Publish
     variables:
       - group: 'k8s-dev'
     jobs:

@@ -31,8 +31,8 @@ stages:
           - task: PublishPipelineArtifact@1
             displayName: Publish Manifest
             inputs:
-              targetPath: "$(Build.SourcesDirectory)/${artifactName}"
-              artifact: ${artifactName}
+              targetPath: "$(Build.SourcesDirectory)/$(artifactName)"
+              artifact: $(artifactName)
   
   - stage: Dev_Deploy
     displayName: Deploy to AKS Dev
