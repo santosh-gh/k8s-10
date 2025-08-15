@@ -16,7 +16,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: order-service
-          image: acronlinestoredevuksouth001.azurecr.io/order:
+          image: acronlinestoredevuksouth001.azurecr.io/order
           ports:
             - containerPort: 3000
           env:

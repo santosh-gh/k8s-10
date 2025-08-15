@@ -16,7 +16,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: product-service
-          image: acronlinestoredevuksouth001.azurecr.io/product:
+          image: acronlinestoredevuksouth001.azurecr.io/product
           ports:
             - containerPort: 3002
           env:
