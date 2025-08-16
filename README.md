@@ -91,7 +91,7 @@
        # Show existing resources
 
          az resource list
-         
+
        # Manual (Run from comand line)
          AzCLI: ./infra/azcli/script.sh
          Bicep: az deployment sub create --location uksouth --template-file ./infra/bicep/main.bicep 
@@ -135,6 +135,9 @@
          store-front-pipeline.yml
 
     3. Kustomize
+
+       # kustomize derectory structure
+
        # Review
          kubectl kustomize ./manifests/config/base/
          kubectl kustomize ./manifests/rabbitmq/overlays/dev
