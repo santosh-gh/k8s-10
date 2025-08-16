@@ -31,7 +31,7 @@
              Dynamically update the Chart version in Chart.yaml
 
     GitHub:  https://github.com/santosh-gh/k8s-07
-    YouTube: https://www.youtube.com/watch?v=VAiR3sNavh0
+    YouTube: https://www.youtube.com/watch?v=Y3RaxSZNTaU&t=1s
 
     Part8:   Automated Deployment (AzCLI + Docker + Helm charts + kubectl + Azure Pipeline)
              Store the helm chart in ACR
@@ -40,16 +40,16 @@
              Deploy into multiple environments (dev, test, prod) with approval gates
 
     GitHub:  https://github.com/santosh-gh/k8s-08
-    YouTube: https://www.youtube.com/watch?v=VAiR3sNavh0
+    YouTube: https://www.youtube.com/watch?v=oNysAAGijGk&t=43s
 
     Part9:   Manual Deployment (AzCLI + Docker + kustomize + kubectl)          
-             Deploy into multiple environments (dev, test, prod) command line
+             Deploy into multiple environments (dev, test, prod) through command line
 
     GitHub:  https://github.com/santosh-gh/k8s-09
-    YouTube: https://www.youtube.com/watch?v=VAiR3sNavh0
+    YouTube: https://www.youtube.com/watch?v=Jtz1KldOPAA&t=1s
 
     Part10:  Automated Deployment (AzCLI + Docker + kustomize + kubectl + Azure Pipeline)          
-             Deploy into multiple environments (dev, test, prod) command line
+             Deploy into multiple environments (dev, test, prod) through automated pipeline
 
     GitHub:  https://github.com/santosh-gh/k8s-10
     YouTube: https://www.youtube.com/watch?v=VAiR3sNavh0
@@ -62,7 +62,6 @@
     # Product service:  Shows product information.
     # Order service:    Places orders.
     # RabbitMQ Server:  Message queue for an order queue.
-
 
 # Directory Structure
 
