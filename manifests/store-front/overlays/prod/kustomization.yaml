@@ -7,4 +7,4 @@ patches:
 
 images:
   - name: acronlinestoredevuksouth001.azurecr.io/store-front
-    newTag: 532
+    newTag: '532'
