@@ -56,7 +56,6 @@ jobs:
                       sed -i "s|acronlinestoredevuksouth001.azurecr.io/${{parameters.serviceName}}|${{parameters.acrName}}.azurecr.io/${{parameters.serviceName}}:${{parameters.imageTag}}|g"  $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/statefulset.yaml
                       cat $(Pipeline.Workspace)/${{parameters.artifactName}}/${{parameters.serviceName}}/base/statefulset.yaml
 
-
                     fi
                   else
                     echo "Skipping image tag update for service 'config'"
