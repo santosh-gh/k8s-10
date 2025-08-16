@@ -82,16 +82,6 @@
 
     1. Infra deployment:
     
-       # Manual (Run from comand line)
-         AzCLI: ./infra/azcli/script.sh
-         Bicep: az deployment sub create --location uksouth --template-file ./infra/bicep/main.bicep 
-         --parameters ./infra/bicep/main.bicepparam 
-
-       # Pipeline (Configure and run in Azure DevOps)
-         AzCLI: azcli-infra-pipeline.yml
-         Bicep: bicep-infra-pipeline.yml
-
-
        # Login to Azure
 
          az login
@@ -101,6 +91,15 @@
        # Show existing resources
 
          az resource list
+         
+       # Manual (Run from comand line)
+         AzCLI: ./infra/azcli/script.sh
+         Bicep: az deployment sub create --location uksouth --template-file ./infra/bicep/main.bicep 
+         --parameters ./infra/bicep/main.bicepparam 
+
+       # Pipeline (Configure and run in Azure DevOps)
+         AzCLI: azcli-infra-pipeline.yml
+         Bicep: bicep-infra-pipeline.yml       
 
        # Create RG, ACR and AKS
 
