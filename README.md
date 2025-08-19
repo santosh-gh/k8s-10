@@ -52,7 +52,7 @@
              Deploy into multiple environments (dev, test, prod) through automated pipeline
 
     GitHub:  https://github.com/santosh-gh/k8s-10
-    YouTube: https://www.youtube.com/watch?v=VAiR3sNavh0
+    YouTube: https://www.youtube.com/watch?v=m5ZXmOk0IBs&t=43s
 
 # Architesture
 
